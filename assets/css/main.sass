@@ -1,7 +1,133 @@
 ---
 ---
 
+// colors
+
+$color-1: #021725
+
+// blue
+$color-2: #e36767
+
+// red
+$color-3: white
+
+// white
+
+// fonts
+
+$primary-font: "Source Sans Pro", sans-serif
+
+//header height
+
+$header-height-S: 50px
+$header-height-M: 80px
+
+// z-index
+
+$content-zindex: 1
+$nav-zindex: 2
+$header-zindex: 3
+
+
+// rem fallback - credits: http://zerosixthree.se/
+
+@function calculateRem($size)
+  $remSize: $size / 16px
+  @return $remSize * 1rem
+
+=font-size($size)
+  font-size: $size
+  font-size: calculateRem($size)
+
+// center vertically and/or horizontally an absolute positioned element
+
+=center($xy: xy)
+  @if $xy == xy
+    left: 50%
+    top: 50%
+    bottom: auto
+    right: auto
+    +transform(translateX(-50%) translateY(-50%))
+  @else if $xy == x
+    left: 50%
+    right: auto
+    +transform(translateX(-50%))
+  @else if $xy == y
+    top: 50%
+    bottom: auto
+    +transform(translateY(-50%))
+
+// border radius
+
+=border-radius($radius: 0.25em)
+  border-radius: $radius
+
+// antialiasing mode font rendering
+
+=font-smoothing
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+
+
+// variables
+
+$S: 320px
+$M: 768px
+$L: 1170px
+
+// media queries
+
+=MQ($canvas)
+  @if $canvas == S
+    @media only screen and (min-width: $S)
+      @content
+  @else if $canvas == M
+    @media only screen and (min-width: $M)
+      @content
+  @else if $canvas == L
+    @media only screen and (min-width: $L)
+      @content
+
+
+
+
+///////////////////////  --
+//                   //  ----
+//      SETTINGS     //  ------
+//                   //  ----
+///////////////////////  --
+
+//------------------------------------------------
+// HEADER PATH CONIFGURATION
+// this is to create a link to the settings to get the location of the path and store it into this sass variable $hero-path. By doing this you can don't have to do inline css and keep all the style with sass.
+$hero-path: '{{ site.data.settings.bg-img }}'
+
+
+//------------------------------------------------
+// Variables
+//
+
+
+
+//------------------------------------------------
+// BREAKPOINTS
+
+$bp-small : 24em
+$bp-small-2 : 29.75em
+$bp-small-3 : 39.8em
+$bp-med : 46.8em
+$bp-med-2 : 48em
+$bp-large : 50em
+$bp-large-2 : 54.5em
+$bp-xl : 60em
+$bp-xl-2 : 67em
+
+
 @import '1-tools/-tools-index'
 @import '2-base/-base-index'
 @import '3-modules/-modules-index'
 @import '4-pages/-pages-index'
+
+
+
+

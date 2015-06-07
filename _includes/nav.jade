@@ -1,0 +1,12 @@
+nav
+  ul(class='primary-nav').
+    {% for item in site.data.settings.menu %}
+      <li><a href="{{ item.url }}"> {{ item.name }}</a></li>
+    {% endfor %}
+    <li class="label">Follow us</li>
+    <div class="nav-social-icons">
+      <li><a href="#" target="_blank"><i class="icon-facebook"></i></a></li>
+      <li><a href="#" target="_blank"><i class="icon-twitter"></i></a></li>
+      <li><a href="#" target="_blank"><i class="icon-google-plus"></i></a></li>
+      <li><a href="#" target="_blank"><i class="icon-instagram"></i></a></li>
+    </div>

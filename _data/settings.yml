@@ -1,15 +1,17 @@
 # Portfolio settings
-title: Kevin Truong
+title: Escape Room SA
 email: tig3r86@gmail.com
-description: Web Specialist // Traveller // Entrepreneur
+description: 'Experience Adelaide first live puzzle game. You have 60 minutes working as a team to discover hidden objects, figure out the clues and unravel mysterious puzzle to escape the room. Bring your friends, family or join in with other fellow escaper and have a great time.'
 
-# Menu item list
 
-# menu:
-# - {name: About Me, url: '#about-me'}
-# - {name: Work, url: '#work'}
-# - {name: Clients, url: '#clients'}
-# - {name: Contact, url: '#contact'}
+#Menu item list
+
+menu:
+- {name: The Game, url: '#The Game'}
+- {name: The Rooms, url: '#The Rooms'}
+- {name: Faq, url: '#faq'}
+- {name: About Us, url: '#About'}
+- {name: Book Now, url: '#Book online'}
 
 
 #-------------------------------
@@ -27,7 +29,7 @@ seo:
 # About Section
 
 # Change the default background image, avatar and blurb
-bg-img: hero-bg.jpg
+bg-img: hero.jpg
 avatar: travitar.jpg
 
 blurb: >

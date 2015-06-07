@@ -21,10 +21,17 @@ $dark-gray: #333;
 $medium-gray: #999;
 $light-gray: #ddd;
 
+$primary-color: #FA023C;
+$text-color: #fff;
+$accent-color: #C8FF00;
+$bg-color: #040004;
+$link-color: $accent-color;
+$selection-color: #C8FF00;
+
 // Font Colors
-$base-background-color: #fff;
-$base-font-color: $dark-gray;
-$action-color: $blue;
+$base-background-color: $bg-color;
+$base-font-color: $text-color;
+$action-color: $accent-color;
 
 // Border
 $base-border-color: $light-gray;
@@ -33,3 +40,5 @@ $base-border: 1px solid $base-border-color;
 // Forms
 $form-box-shadow: inset 0 1px 3px rgba(#000, 0.06);
 $form-box-shadow-focus: $form-box-shadow, 0 0 5px adjust-color($action-color, $lightness: -5%, $alpha: -0.3);
+
+

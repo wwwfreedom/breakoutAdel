@@ -1,0 +1,60 @@
+.primary-nav
+  // by default it's hidden - on top of the viewport
+  position: fixed
+  left: 0
+  top: 0
+  height: 100%
+  width: 100%
+  background: rgba($color-1, 0.96)
+  z-index: $nav-zindex
+  text-align: center
+  padding: $header-height-S 0
+  -webkit-backface-visibility: hidden
+  backface-visibility: hidden
+  overflow: auto
+  // this fixes the buggy scrolling on webkit browsers - mobile devices only - when overflow property is applied
+  -webkit-overflow-scrolling: touch
+  +transform(translateY(-100%))
+  +transition-property(transform)
+  +transition-duration(0.4s)
+  li
+    +font-size(22px)
+    font-weight: 300
+    +font-smoothing
+    margin: .2em 0
+    text-transform: capitalize
+    &:nth-child(5)
+      margin: 0 auto
+      background-color: $primary-color
+      width: 50%
+      border: 1px solid white
+  a
+    display: inline-block
+    padding: .4em 1em
+    +border-radius
+    +transition(background 0.2s)
+    .no-touch &:hover
+      background-color: $color-2
+  .label
+    color: lighten($color-1, 15%)
+    text-transform: uppercase
+    font-weight: 700
+    +font-size(14px)
+    margin: 2.4em 0 .8em
+  .nav-social-icons
+    +display(flex)
+    +flex-direction(row)
+    +justify-content(space-around)
+    a
+      padding: 0
+  &.is-visible
+    +transform(translateY(0))
+  +MQ(M)
+    padding: $header-height-M 0
+
+  +MQ(L)
+    li
+      +font-size(30px)
+    .label
+      +font-size(16px)
+

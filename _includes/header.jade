@@ -1,0 +1,17 @@
+header(class='header')
+  .logo
+  {% include logo.html %}
+
+  nav(role='navigation')
+    ul(class='secondary-nav').
+      {% for item in site.data.settings.menu %}
+        <li><a href="{{ item.url }}"> {{ item.name }}</a></li>
+      {% endfor %}
+
+  a(class='primary-nav-trigger' href='#')
+    span(class='menu-text') Menu
+    span(class='menu-icon')
+  //- h1
+  //-   span {{ site.data.settings.title }}
+  //- hr
+  //- p(class='kicker') {{ site.data.settings.description }}
