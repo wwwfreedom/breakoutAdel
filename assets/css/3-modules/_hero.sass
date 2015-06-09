@@ -1,15 +1,12 @@
 .hero
-  $base-border-radius: 3px !default
-  $action-color: #477dca !default
-  $large-screen: em(860) !default
   $hero-background-top: #7f99be
   $hero-background-bottom: #20392b
   $hero-color: white
   $gradient-angle: 10deg
-  $hero-image: "https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/mountains.png"
+  $hero-image: "../img/hero3.jpg"
   +background(url($hero-image), linear-gradient($gradient-angle, $hero-background-bottom, $hero-background-top), no-repeat $hero-background-top scroll)
   background-color: #324766
-  background-position: top
+  background-position: center
   background-repeat: no-repeat
   background-size: cover
   padding-bottom: 3em
@@ -17,26 +14,40 @@
     height: 4em
     margin-bottom: 1em
   .hero-inner
-    +outer-container
+    // +display(flex)
     +clearfix
     color: $hero-color
     margin: auto
-    padding: 3.5em
+    padding: 5em 3.5em 3.5em
+    +MQ(M)
+      padding: 10em 3.5em 3.5em
     text-align: center
     .hero-copy
       text-align: center
       h1
-        font-size: 1.6em
+        font-size: 2em
         margin-bottom: 0.5em
-        +media($large-screen)
-          font-size: 1.8em
+        text-transform: uppercase
+        font-weight: 300
+        span
+          color: $primary-color
+        +MQ(M)
+          font-size: 3em
       p
         font-weight: 200
         line-height: 1.4em
         margin: 0 auto 3em auto
-        +media($large-screen)
+        +MQ(M)
           font-size: 1.1em
           max-width: 40%
-    button
-      +button(flat, $action-color)
+    a
       padding: 0.7em 1em
+      background: $primary-color
+      color: white
+      border: 1px solid red
+      pointer:auto
+      &:hover
+        background: white
+        color: red
+        +transition(all 0.25s ease-in-out)
+      text-transform: uppercase

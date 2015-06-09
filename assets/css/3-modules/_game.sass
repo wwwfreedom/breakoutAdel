@@ -1,13 +1,61 @@
-.cards
+.game
   +display(flex)
-  +flex-wrap(wrap)
-  +justify-content(space-between)
-  .card
-    +flex-basis(20em)
-    +flex-grow(1)
-    margin: 0 1em
-  .card-image
-    max-height: 150px
-    overflow: hidden
-    img
-      width: 100%
+  +flex-direction(column)
+  background: $bg-color
+  color: #f2f2f2
+  .game-title
+    +display(flex)
+    +justify-content(center)
+    margin: 2.5em 0 0 0
+    h2
+      font:
+        size: 2em
+        weight: 300
+      text-transform: uppercase
+      margin-bottom: 1em
+  .game-cards
+    +display(flex)
+    +flex-direction(column)
+    +justify-content(center)
+    +MQ(M)
+      +flex-direction(row)
+      +justify-content(space-around)
+      margin: 1em
+    +MQ(L)
+      width: 960px
+      margin: 0 auto
+    .game-step
+      +display(flex)
+      +flex-direction(column)
+      text-align: center
+      +MQ(M)
+        width: 300px
+      i
+        font:
+          size: 3em
+        border-bottom: 4px solid $primary-color
+        padding: 0 0.25em 0.25em
+        margin: 0 auto 0.75em
+        width: 100px
+      .subheading
+        margin: 0 auto
+        +MQ(M)
+          height: 6em
+          width: 10em
+        // margin-bottom: 1em
+        h3
+          font:
+            size: 1.3em
+            weight: 300
+          text-transform: uppercase
+      p
+        font:
+          size: 1em
+        margin-bottom: 2em
+        color: #7a7a7a
+        +MQ(M)
+          margin: 0 1em 2em
+
+
+
+

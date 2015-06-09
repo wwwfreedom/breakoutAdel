@@ -56,6 +56,7 @@ function navigation() {
   $('.primary-nav li a').click(function(e){
     // this is a mistake here it's a link so you want it to link somewhere if you prevent default it will not link anywhere. the prevent default is only good for submit button
     // e.preventDefault();
+    $('.menu-icon').toggleClass('is-clicked');
     if( $('.primary-nav').hasClass('is-visible') ) {
       $('.primary-nav').removeClass('is-visible').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend',function(){
         $('body').removeClass('overflow-hidden');

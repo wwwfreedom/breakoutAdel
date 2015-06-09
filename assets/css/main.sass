@@ -72,6 +72,7 @@ $header-zindex: 3
 // variables
 
 $S: 320px
+$SM: 568px
 $M: 768px
 $L: 1170px
 
@@ -80,6 +81,9 @@ $L: 1170px
 =MQ($canvas)
   @if $canvas == S
     @media only screen and (min-width: $S)
+      @content
+  @else if $canvas == SM
+    @media only screen and (min-width: $SM)
       @content
   @else if $canvas == M
     @media only screen and (min-width: $M)
