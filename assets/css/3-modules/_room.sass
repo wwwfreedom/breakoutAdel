@@ -7,73 +7,107 @@
     text-align: center
     h2
       @extend %h2-header
-      margin: 0.75em auto 1.5em
-  .rooms
-    .room
+      margin: 0.75em auto 0em
+  .room
+    +display(flex)
+    +flex-direction(column)
+    margin-top: 2em
+    +MQ(M)
+      +flex-direction(row)
+      +justify-content(space-between)
+      +flex-wrap(wrap)
+    +MQ(L)
+      max-width: 1170px
+      margin: 0 auto
+    // adjusting the order of the flex items which are the .room-img and copy-wrap
+    .first
+      +MQ(M)
+        +order(-4)
+      +MQ(L)
+        +order(-4)
+    .second
+      +MQ(M)
+        +order(-3)
+      +MQ(L)
+        +order(-3)
+    .third
+      +MQ(M)
+        +order(-1)
+        // this is to adjust the ipad orientation order to go back to normal
+        @media only screen and (orientation: portrait)
+          +order(-2)
+      +MQ(L)
+        +order(-1)
+    .fourth
+      +MQ(M)
+        +order(-2)
+        @media only screen and (orientation: portrait)
+          +order(-1)
+      +MQ(L)
+        +order(-2)
+    .room-img
+      margin: 1.5em auto 1.5em
+      max-width: 400px
+      +MQ(M)
+        margin: 6em auto 0
+        max-width: 485px
+        @media only screen and (orientation: portrait)
+          margin: 3em auto 0
+      +MQ(L)
+        max-width: 550px
+        margin: 6em auto 0
+    .copy-wrap
       +display(flex)
       +flex-direction(column)
-      .img-copy-wrap
-        +MQ(M)
-          +display(flex)
-          +justify-content(space-between)
-          margin: 1.5em
-        .room-img
-          // this works better to center the img on mobile
-          margin: 0 auto 1.5em
-          max-width: 400px
-          +MQ(M)
-            margin: 0 auto 0 1em
-            max-width: 500px
-          +MQ(L)
-            max-width: 600px
-            margin: 0 auto 0 1em
-        .copy-wrap
-          +display(flex)
-          +flex-direction(column)
-          +MQ(SM)
-            width: 400px
-            margin: 0 auto
-          +MQ(M)
-            width: 450px
-            padding-left: 1em
-          +MQ(L)
-            margin-right: 3em
-          .room-header
-            text-align: center
-            h3
-              font:
-                size: 1.5em
-                weight: 300
-              text-transform: uppercase
-          .room-copy
-            text-align: center
-            p
-            font:
-              size: 1em
-            margin-bottom: 1em
-            color: #7a7a7a
-          .room-cta
-            +display(flex)
-            +flex-direction(column)
-            text-align: center
-            margin-bottom: 3em
-            p
-              color: $primary-color
-              font:
-                style: italic
-                size: 1.3em
-                weight: 300
-            a
-              width: 140px
-              height: 40px
-              margin: 0 auto
-              padding: 0.5em 0.25em
-              background: $primary-color
-              color: white
-              border: 1px solid red
-              pointer:auto
-              &:hover
-                background: white
-                color: red
-                +transition(all 0.25s ease-in-out)
-              text-transform: uppercase
+      +MQ(SM)
+        width: 400px
+        margin: 0 auto
+      +MQ(M)
+        width: 450px
+        margin-top: 6em
+        @media only screen and (orientation: portrait)
+          margin-top: 2em
+        padding-left: 1em
+        padding-right: 1em
+      +MQ(L)
+        margin-right: 3em
+        margin-top: 6em
+      .room-header
+        text-align: center
+        h3
+          font:
+            size: 1.5em
+            weight: 300
+          text-transform: uppercase
+      .room-copy
+        text-align: center
+        p
+        font:
+          size: 1em
+        margin-bottom: 1em
+        color: #7a7a7a
+      .room-cta
+        +display(flex)
+        +flex-direction(column)
+        text-align: center
+        margin-bottom: 3em
+        p
+          color: $primary-color
+          font:
+            style: italic
+            size: 1.3em
+            weight: 300
+        a
+          width: 140px
+          height: 40px
+          margin: 0 auto
+          padding: 0.5em 0.25em
+          background: $primary-color
+          color: white
+          border: 1px solid red
+          pointer:auto
+          &:hover
+            background: white
+            color: red
+            +transition(all 0.25s ease-in-out)
+          text-transform: uppercase

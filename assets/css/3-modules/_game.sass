@@ -12,7 +12,8 @@
         size: 2em
         weight: 300
       text-transform: uppercase
-      margin-bottom: 1em
+      margin-bottom: 1.5em
+      margin-top: 1.5em
   .game-cards
     +display(flex)
     +flex-direction(column)
@@ -28,6 +29,9 @@
       +display(flex)
       +flex-direction(column)
       text-align: center
+      +MQ(SM)
+        width: 350px
+        margin: 0 auto
       +MQ(M)
         width: 300px
       i
