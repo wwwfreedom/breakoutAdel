@@ -1,0 +1,89 @@
+.faq
+  color: #f2f2f2
+  .faq-header
+    h2
+      @extend %h2-header
+      margin: 0.75em auto 1.5em
+      text-align: center
+  .faq-body
+    width: 100%
+    +MQ(SM)
+      width: 450px
+      margin: 0 auto
+    +MQ(M)
+      width: 800px
+      margin: 0 auto
+      @media only screen and (orientation: portrait)
+        width: 600px
+    padding: 20px
+    margin: 0 auto
+    .question-wrap
+      .question
+        position: relative
+        background: #3B3B3B
+        margin: 0
+        padding: 10px 40px 10px 10px
+        display: block
+        width: 100%
+        cursor: pointer
+        &:hover
+          color: red
+          +transition(all 0.25s ease-in-out)
+
+      .answers
+        border-top: 1px solid $primary-color
+        background: #3B3B3B
+        padding: 0px 15px
+        margin-bottom: 0.5em
+        height: 0
+        overflow: hidden
+        z-index: -1
+        position: relative
+        opacity: 0
+        +transition(all 0.3s ease-in-out)
+
+      .questions:checked ~ .answers
+        height: auto
+        opacity: 1
+        padding: 15px
+
+      i
+        position: absolute
+        +user-select(none)
+        z-index: 10
+        // this is to move the arrow in the x axis
+        +transform(translate( -40px , 0 ))
+        +MQ(SM)
+          +transform(translate( -100px , 0 ))
+        +MQ(M)
+          +transform(translate( -160px , 0 ))
+          @media only screen and (orientation: portrait)
+            +transform(translate( -120px , 0 ))
+        +MQ(L)
+          +transform(translate( -290px , 0 ))
+        margin-top: 18px
+        right: 0
+        // using the before and after to draw the lines
+        &:before , &:after
+          content: ""
+          +transition(all 0.25s ease-in-out)
+          position: absolute
+          background-color: $primary-color
+          width: 3px
+          height: 9px
+        &:before
+          +transform(translate( 2px , 0 ) rotate( 45deg ))
+
+        &:after
+          +transform(translate( -2px , 0 ) rotate( -45deg ))
+      // this is to change rotate and the arrow after it is checked
+      .questions:checked ~ i
+        &:before
+          +transform(translate( -2px , 0 ) rotate( 45deg ))
+
+        &:after
+          +transform(translate( 2px , 0 ) rotate( -45deg ))
+
+      .questions
+        display: none
+
