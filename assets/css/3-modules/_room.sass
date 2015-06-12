@@ -8,6 +8,8 @@
     h2
       @extend %h2-header
       margin: 0.75em auto 0em
+      @media only screen and (orientation: portrait)
+        margin-bottom: 1em
   .room
     +display(flex)
     +flex-direction(column)
@@ -65,9 +67,8 @@
         margin: 0 auto
       +MQ(M)
         width: 450px
-        margin-top: 6em
+        margin-top: 5em
         @media only screen and (orientation: portrait)
-          margin-top: 2em
         padding-left: 1em
         padding-right: 1em
       +MQ(L)

@@ -1,8 +1,19 @@
 $(document).ready(function($){
   navigation();
+  faqExpander();
 
 });
 
+function faqExpander() {
+  var $tab = $('.tab');
+
+  $tab.on("click", function(e){
+    e.preventDefault();
+    var $this = $(this);
+    $this.toggleClass('active');
+    $this.next('.panel').toggleClass('active');
+  });
+}
 
 // THIS IS THE FUNCITON TO CONTROL NAVIGATION BEHAVIOURS
 function navigation() {

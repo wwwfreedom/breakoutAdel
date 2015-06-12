@@ -12,7 +12,7 @@ menu:
 - {name: The Game, url: '#game'}
 - {name: The Rooms, url: '#room'}
 - {name: Faq, url: '#faq'}
-- {name: About Us, url: '#About'}
+- {name: About Us, url: '#about'}
 - {name: Book Now, url: '#Book online'}
 
 

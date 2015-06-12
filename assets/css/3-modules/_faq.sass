@@ -1,89 +1,71 @@
 .faq
-  color: #f2f2f2
   .faq-header
     h2
       @extend %h2-header
       margin: 0.75em auto 1.5em
+      padding: 0 0.5em
       text-align: center
   .faq-body
     width: 100%
+    margin: 0 auto
     +MQ(SM)
       width: 450px
-      margin: 0 auto
     +MQ(M)
       width: 800px
-      margin: 0 auto
       @media only screen and (orientation: portrait)
         width: 600px
-    padding: 20px
-    margin: 0 auto
-    .question-wrap
-      .question
-        position: relative
-        background: #3B3B3B
+    .faq-child
+      @media only screen and (max-width: 320px)
+        width: 90%
+        margin: 0 auto 10px
+      background: #3B3B3B
+      margin-bottom: 10px
+      @extend %no-select
+      .tab
+        padding: 1em
         margin: 0
-        padding: 10px 40px 10px 10px
-        display: block
-        width: 100%
-        cursor: pointer
-        &:hover
-          color: red
-          +transition(all 0.25s ease-in-out)
-
-      .answers
-        border-top: 1px solid $primary-color
-        background: #3B3B3B
-        padding: 0px 15px
-        margin-bottom: 0.5em
-        height: 0
-        overflow: hidden
-        z-index: -1
         position: relative
-        opacity: 0
-        +transition(all 0.3s ease-in-out)
+        cursor: pointer
+        outline: 0
+        cursor: default
 
-      .questions:checked ~ .answers
-        height: auto
-        opacity: 1
-        padding: 15px
+        &:hover
+          color: $primary-color
+          +transition(all 0.3s ease)
 
-      i
+      .tab:after
+        color: $primary-color
+        content: '▼'
+        // the position is key to make sure that the after pointer stay at the top corner. note that the this is relative to the element with .tab class
         position: absolute
-        +user-select(none)
-        z-index: 10
-        // this is to move the arrow in the x axis
-        +transform(translate( -40px , 0 ))
-        +MQ(SM)
-          +transform(translate( -100px , 0 ))
-        +MQ(M)
-          +transform(translate( -160px , 0 ))
-          @media only screen and (orientation: portrait)
-            +transform(translate( -120px , 0 ))
-        +MQ(L)
-          +transform(translate( -290px , 0 ))
-        margin-top: 18px
+        top: 0
         right: 0
-        // using the before and after to draw the lines
-        &:before , &:after
-          content: ""
-          +transition(all 0.25s ease-in-out)
-          position: absolute
-          background-color: $primary-color
-          width: 3px
-          height: 9px
-        &:before
-          +transform(translate( 2px , 0 ) rotate( 45deg ))
+        display: block
+        font-size: 1em
+        padding: 0.5em
 
-        &:after
-          +transform(translate( -2px , 0 ) rotate( -45deg ))
-      // this is to change rotate and the arrow after it is checked
-      .questions:checked ~ i
-        &:before
-          +transform(translate( -2px , 0 ) rotate( 45deg ))
+      .tab.active
+        color: $primary-color
 
-        &:after
-          +transform(translate( 2px , 0 ) rotate( -45deg ))
+      .tab.active:after
+        color: $primary-color
+        content: '▲'
 
-      .questions
+      .panel
+        // overflow: hidden
         display: none
+        max-height: 0em
+        border-top: 1px solid $primary-color
+
+      .panel.active
+        max-height: 30em
+        display: block
+        +transition(all 0.3s ease)
+
+      .panel p
+        padding: 1em
+
+      // .panel p:last-child
+      //   margin: 0
+
 
