@@ -1,0 +1,125 @@
+.contact
+  header
+    h2
+      @extend %h2-header
+      margin: 2em auto 1.5em
+      text-align: center
+
+  &--body
+    fieldset
+      margin: 24px 0
+      background-color: $bg-color
+      border: none
+      // width: 400px
+
+    legend
+      padding-bottom: 10px
+      margin-bottom: 20px
+      font:
+        size: 1.5em
+        weight: 300
+      border-bottom: 1px solid $primary-color
+
+    i
+      color: $light-gray
+      opacity: 0.4
+      font-size: 1.5em
+      +size(30px)
+      position: absolute
+      left: 10px
+
+    input
+      height: 50px
+      margin: 0
+      padding-left: 40px
+    // style to position the icon in the form inputs
+    .name--input--wrap
+      position: relative
+      i
+        bottom: 8px
+
+    .email--input--wrap
+      position: relative
+      i
+        bottom: 8px
+      .error
+        border: 1px solid $primary-color
+
+    .message--input--wrap
+      position: relative
+      textarea
+        margin: 0
+        padding-left: 40px
+      i
+        bottom: 160px
+
+    input[type="text"],
+    input[type="email"],
+    textarea,
+    legend,
+      display: block
+      width: 100%
+      +appearance(none)
+      margin: 0.75em auto
+      +placeholder
+        font-style: italic
+        // letter-spacing: 2px
+        opacity: 0.4
+
+    input[type="text"],
+    input[type="email"],
+    textarea,
+      // general style for input elements
+      border: 1px solid darken($light-gray, 10%)
+      // background-color: $color-4
+      border-radius: .25em
+      box-shadow: inset 0 1px 1px rgba($light-gray, 0.08)
+      &:focus
+        outline: none
+        border-color: $color-3
+        box-shadow: 0 0 5px rgba($color-3, 0.2)
+
+    textarea
+      min-height: 200px
+      resize: vertical
+      overflow: auto
+
+    input[type="submit"]
+      float: right
+      +font-smoothing
+      +appearance(none)
+      @extend %cta-button
+      margin-top: 1em
+
+    label
+      display: none
+
+    .form-messages
+
+      p
+        font:
+          size: 1em
+          weight: 300
+        // display: none
+        border-radius: .25em
+        text-align: center
+        +font-smoothing
+        opacity: 0
+        max-height: 0em
+
+      .error
+        padding: 0.5em
+        max-height: 100%
+        opacity: 1
+        background: shade($primary-color, 20%)
+        +transition(all 0.3s ease)
+
+      .success
+        padding: 0.5em
+        max-height: 100%
+        opacity: 1
+        background: tint(green, 20%)
+        +transition(all 0.3s ease)
+
+
+

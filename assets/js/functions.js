@@ -1,8 +1,96 @@
 $(document).ready(function($){
   navigation();
   faqExpander();
+  formControl();
 
 });
+
+
+// function to control the submission of the contact form
+//
+function formControl() {
+  // get the form
+  var form = $('.form');
+
+  // Get the message div
+  var formMessages = $('.form-messages p');
+  var emailInput = $('#email');
+
+  // Set up an event listener for the contact form
+  $(form).submit(function(e) {
+    e.preventDefault();
+
+    var emailFilter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,10})+$/;
+    var emailText = $("#email").val();
+    if (!emailFilter.test(emailText)) {
+      $(formMessages).text("Please enter a valid email address").toggleClass('error');
+      $(emailInput).toggleClass('error');
+      return false;
+    } else {
+      $(formMessages).text('').toggleClass('error');
+      $(emailInput).toggleClass('error');
+    }
+
+    // else {
+    //   // $("#email").css({
+    //   //   "color" : "#CE3B46"
+    //   // });
+    // }
+
+    // don't need to filter name as much but if I need to activate this code below
+    // var nameFilter = /^([a-zA-Z \t]{3,15})+$/;
+    // var nameText = $("#name").val();
+    // if (nameFilter.test(nameText)) {
+    //   $("#name").css({
+    //     "color" : "#609D29"
+    //   });
+    // }
+    // else {
+    //   // $("#name").css({
+    //   //   "color" : "#CE3B46"
+    //   // });
+    //   $(formMessages).text("Please enter a valid name");
+    //   return false;
+    // }
+
+    $.ajax({
+      type: 'POST',
+      url: "http://formspree.io/escaperoomsa@gmail.com",
+      // Must serialize the form data
+      data: $(form).serialize(),
+      dataType: "json",
+      beforeSend: function() {
+        // validate the
+      },
+      success: function(data) {
+        // Make sure that the formMessages div has the 'success' class.
+        $(formMessages).removeClass('error');
+        $(formMessages).addClass('success');
+        console.log(data);
+        // Set the message text
+        $(formMessages).text("The message is on it's way. We'll get back to you asap.");
+
+        // Clear the form
+        $('#name').val('');
+        $('#email').val('');
+        $('#message').val('');
+
+      },
+      error: function(err) {
+        // Make sure that the formMessage div has the 'error' class
+        $(formMessages).removeClass('success');
+        $(formMessages).removeClass('error');
+
+        // Set the message text
+        // if (err.responseText !== '') {
+        //   $(formMessages).text(data.responseText);
+        // } else {
+          $(formMessages).text('Oops! An error occured and your message could not be sent. Please try again.');
+        }
+      }); // end ajax function
+  });
+}
+
 
 function faqExpander() {
   var $tab = $('.tab');

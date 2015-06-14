@@ -18,3 +18,15 @@
   +transform(translate3d(0, 0, 0))
   -webkit-backface-visibility: hidden
   backface-visibility: hidden
+
+%cta-button
+  padding: 0.7em 1em
+  border-radius: .25em
+  background: $primary-color
+  color: white
+  pointer:auto
+  &:hover
+    background: white
+    color: red
+    +transition(all 0.25s ease-in-out)
+  text-transform: uppercase

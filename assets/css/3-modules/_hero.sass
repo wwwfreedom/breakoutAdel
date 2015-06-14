@@ -41,13 +41,4 @@
           font-size: 1.1em
           max-width: 40%
     a
-      padding: 0.7em 1em
-      background: $primary-color
-      color: white
-      border: 1px solid red
-      pointer:auto
-      &:hover
-        background: white
-        color: red
-        +transition(all 0.25s ease-in-out)
-      text-transform: uppercase
+      @extend %cta-button

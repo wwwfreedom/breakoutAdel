@@ -1,5 +1,25 @@
 section(class='contact')
   article#contact
     header
-      h2 Get in touch
-    .contact-body
+      h2 Contact Us
+    .contact--body
+      form.form(novalidate)
+        fieldset
+          legend Send us a message
+          .form-messages
+            p test
+          .name--input--wrap
+            label(for="name") Name
+            input(type="text" name="name" id="name" placeholder="Your name" tabindex=1 required)
+            i.icon-user2
+          .email--input--wrap
+            label(for="email") Email
+            input(type="email" name="email" id="email" placeholder="Your email" tabindex=2 required)
+            i.icon-envelope-o
+          .message--input--wrap
+            label(for="message") Message
+            textarea.message(name="textarea" id="message" placeholder="Your message" tabindex=3 required)
+            i.icon-pencil-square-o
+            input(type="hidden" name="_gotcha" style="display:none")
+        div
+          input(type="submit" value="Send Message" tabindex=4)

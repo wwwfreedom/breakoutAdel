@@ -2,8 +2,33 @@
 <section class="contact">
   <article id="contact">
     <header>
-      <h2>Get in touch</h2>
+      <h2>Contact Us</h2>
     </header>
-    <div class="contact-body"></div>
+    <div class="contact--body">
+      <form novalidate="novalidate" class="form">
+        <fieldset>
+          <legend>Send us a message</legend>
+          <div class="form-messages">
+            <p>test</p>
+          </div>
+          <div class="name--input--wrap">
+            <label for="name">Name</label>
+            <input type="text" name="name" id="name" placeholder="Your name" tabindex="1" required="required"/><i class="icon-user2"></i>
+          </div>
+          <div class="email--input--wrap">
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" placeholder="Your email" tabindex="2" required="required"/><i class="icon-envelope-o"></i>
+          </div>
+          <div class="message--input--wrap">
+            <label for="message">Message</label>
+            <textarea name="textarea" id="message" placeholder="Your message" tabindex="3" required="required" class="message"></textarea><i class="icon-pencil-square-o"></i>
+            <input type="hidden" name="_gotcha" style="display:none"/>
+          </div>
+        </fieldset>
+        <div>
+          <input type="submit" value="Send Message" tabindex="4"/>
+        </div>
+      </form>
+    </div>
   </article>
 </section>
