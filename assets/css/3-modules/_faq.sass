@@ -52,20 +52,18 @@
         content: '▲'
 
       .panel
-        // overflow: hidden
-        display: none
+        // lesson: can't transition display: none use max-height:0 as an alternative with opacity for nice animation.
         max-height: 0em
+        opacity: 0
         border-top: 1px solid $primary-color
 
       .panel.active
-        max-height: 30em
+        opacity: 1
+        max-height: 100%
         display: block
-        +transition(all 0.3s ease)
+        +transition(all 0.3s ease-in-out)
+        p
+          padding: 1em
 
-      .panel p
-        padding: 1em
-
-      // .panel p:last-child
-      //   margin: 0
 
 
