@@ -4,8 +4,83 @@
       @extend %h2-header
       margin: 2em auto 1.5em
       text-align: center
-
+  &--map
+    +size(450px)
+    background: pink
+  // styling for the address, social and form modules
   &--body
+    +display(flex)
+    +flex-direction(column)
+    .map--address
+      +display(flex)
+      +flex-direction(column)
+      margin: 1.5em auto
+      text-align: center
+      // width: 400px
+      a
+        font-size: 1.2em
+        font-weight: 300
+        margin: 0.75em auto
+
+        &:before
+          padding-right: 10px
+          color: $primary-color
+
+    // styling for the map button launcher on the mobile
+    .map--cta--button
+      +display(flex)
+      +flex-direction(column)
+      text-align: center
+      margin: 1em auto 3em
+      +MQ(M)
+        display: none
+      a
+        @extend %cta-button
+        margin: 0em 1em 1.5em 1em
+
+
+    // styling for the icon module
+    .icon--wrap
+      +display(flex)
+      +flex-direction(column)
+      h3
+        @extend %h3-header
+        text-align: center
+      .icons
+        list-style: none
+        +display(flex)
+        +flex-wrap(wrap)
+        +justify-content(space-around)
+        margin: 1em auto
+        li
+          margin: 1em
+          // background: $light-gray
+          border: 3px solid rgba(204, 0, 0, .42)
+          +size(70px)
+          text-align: center
+          border-radius: 50%
+
+          &:hover
+            border: 3px solid $primary-color
+            border-radius: 50%
+            +transition(all 0.3s ease)
+
+        a
+          // color: black
+          font-size: 2.5em
+          line-height: 1.6em
+
+          &:hover
+            color: $text-color
+
+
+
+        .yt a
+          padding-left: 5px
+        .ig a
+          padding-left: 5px
+
+
     fieldset
       margin: 24px 0
       background-color: $bg-color
@@ -20,7 +95,7 @@
         weight: 300
       border-bottom: 1px solid $primary-color
 
-    i
+    .form i
       color: $light-gray
       opacity: 0.4
       font-size: 1.5em

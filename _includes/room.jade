@@ -1,15 +1,15 @@
 section(class="room-section")
   article(id="room")
     .room-title
-      h2 The Rooms
+      h2 {{ site.data.settings.room-title }}
     .room
       .room-img.first
         img(src="http://lorempixel.com/600/480/animals")
       .copy-wrap.second
         .room-header
-          h3 Missing Lili
+          h3 {{ site.data.settings.room1-title }}
         .room-copy
-          p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo, cupiditate. Quibusdam, deserunt blanditiis velit in reprehenderit ipsa iure ea perspiciatis possimus, voluptates beatae minus nesciunt, earum autem maxime! Quam, fugit.
+          p {{ site.data.settings.room1-copy }}
         .room-cta
           p Can you escape?
           a(href='#book') Book now
@@ -18,9 +18,9 @@ section(class="room-section")
         img(src="http://lorempixel.com/600/480/business")
       .copy-wrap.fourth
         .room-header
-          h3 Davinci Code
+          h3 {{ site.data.settings.room2-title }}
         .room-copy
-          p This should be the 4th item Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo, cupiditate. Quibusdam, deserunt blanditiis velit in reprehenderit ipsa iure ea perspiciatis possimus, voluptates beatae minus nesciunt, earum autem maxime! Quam, fugit.
+          p {{ site.data.settings.room2-copy }}
         .room-cta
           p Can you escape?
           a(href='#book') Book now

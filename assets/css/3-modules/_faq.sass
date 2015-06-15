@@ -53,7 +53,7 @@
 
       .panel
         // lesson: can't transition display: none use max-height:0 as an alternative with opacity for nice animation.
-        max-height: 0em
+        max-height: 0
         opacity: 0
         border-top: 1px solid $primary-color
 
@@ -61,7 +61,7 @@
         opacity: 1
         max-height: 100%
         display: block
-        +transition(all 0.3s ease-in-out)
+        +transition(all 0.5s ease)
         p
           padding: 1em
 

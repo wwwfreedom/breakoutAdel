@@ -2,7 +2,32 @@ section(class='contact')
   article#contact
     header
       h2 Contact Us
+
+    .contact--map#map-canvas
+
     .contact--body
+      .map--address
+        a.icon-map-marker(href="#" target="_blank") Adelaide SA 5000
+        a.icon-phone(href="#") 0938 021 039
+        a.icon-envelope-o(href="#") escaperoomsa@gmail.com
+      .map--cta--button
+        a(href="#") Tap here to lauch map on iphone
+        a(href="#") Tap here to lauch map on Android
+      //- can't use .social class for some reason because of adblock
+      .icon--wrap
+        h3 Follow us
+        .icons
+          li
+            a.icon-facebook(href="#" target="_blank")
+          li.fb
+            a.icon-twitter(href="#" target="_blank")
+          li.tw
+            a.icon-google-plus(href="#" target="_blank")
+          li.ig
+            a.icon-instagram(href="#" target="_blank")
+          li.yt
+            a.icon-youtube(href="#" target="_blank")
+
       form.form(novalidate)
         fieldset
           legend Send us a message
