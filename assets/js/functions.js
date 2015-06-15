@@ -2,8 +2,54 @@ $(document).ready(function($){
   navigation();
   faqExpander();
   formControl();
+  lazyloadMap();
 
 });
+
+
+function lazyloadMap() {
+  ;( function( $, window, document, undefined )
+    {
+
+        $( '.contact--map' ).lazyLoadGoogleMaps(
+        {
+            callback: function( container, map )
+            {
+                var $container  = $( container ),
+                    center      = new google.maps.LatLng( $container.attr( 'data-lat' ), $container.attr( 'data-lng' ) );
+
+                map.setOptions({ zoom: 14, center: center });
+                new google.maps.Marker({ position: center, map: map });
+            }
+        });
+
+    })( jQuery, window, document );
+
+    var $window         = $( window ),  // variable cache for a better performance
+    mapInstances    = [],           // stack of map instances
+
+    // change the class below to what ever you name the map
+    $pluginInstance = $( '.google-map' ).lazyLoadGoogleMaps(
+    {
+        callback: function( container, map )
+        {
+            var $container  = $( container ),
+                center      = new google.maps.LatLng( $container.attr( 'data-lat' ), $container.attr( 'data-lng' ) );
+
+            $.data( map, 'center', center );
+            mapInstances.push( map );
+        }
+    });
+
+$window.on( 'resize', $pluginInstance.debounce( 1000, function()
+{
+    $.each( mapInstances, function()
+    {
+        this.setCenter( $.data( this, 'center' ) );
+    });
+}));
+
+}
 
 
 // function to control the submission of the contact form
