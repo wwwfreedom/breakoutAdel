@@ -3,9 +3,32 @@ $(document).ready(function($){
   faqExpander();
   formControl();
   lazyloadMap();
+  copyright();
+  smoothScroll();
 
 });
 
+// to make the internal link of the one page site scroll smoothly instead of the default jump
+function smoothScroll() {
+  $('a[href*=#]:not([href=#])').click(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+      if (target.length) {
+        $('html,body').animate({
+          scrollTop: target.offset().top
+        }, 1000);
+        return false;
+      }
+    }
+  });
+}
+
+
+function copyright() {
+  var year = new Date().getFullYear();
+  $('.copyright').text(year);
+}
 
 function lazyloadMap() {
   ;( function( $, window, document, undefined )

@@ -8,9 +8,9 @@ section(class='contact')
     .contact--body
       .contact--body--address-social
         .map--address
-          a.icon-map-marker(href="#" target="_blank") Adelaide SA 5000
-          a.icon-phone(href="#") 0938 021 039
-          a.icon-envelope-o(href="#") escaperoomsa@gmail.com
+          a.icon-map-marker(href="https://www.google.com/maps/dir//adelaide/" target="_blank") Adelaide SA 5000
+          a.icon-phone(href="tel:0938021039") 0938 021 039
+          a.icon-envelope-o(href="#form") escaperoomsa@gmail.com
         .map--cta--button
           a(href="https://www.google.com/maps/dir//adelaide/" target="_blank") Tap here to lauch map with direction
         //- can't use .social class for some reason because of adblock
@@ -29,10 +29,10 @@ section(class='contact')
               a.icon-youtube(href="#" target="_blank")
 
       form.form(novalidate)
-        fieldset
+        fieldset#form
           legend Send us a message
           .form-messages
-            p test
+            p
           .name--input--wrap
             label(for="name") Name
             input(type="text" name="name" id="name" placeholder="Your name" tabindex=1 required)

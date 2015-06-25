@@ -9,11 +9,12 @@ punchline: "60 minutes to escape"
 #Menu item list
 
 menu:
-- {name: The Game, url: '#game'}
-- {name: The Rooms, url: '#room'}
-- {name: Faq, url: '#faq'}
-- {name: About Us, url: '#about'}
-- {name: Book Now, url: '#Book online'}
+- {name: The Game, url: '//localhost:3001#game'}
+- {name: The Rooms, url: '//localhost:3001#room'}
+- {name: Faq, url: '//localhost:3001#faq'}
+- {name: About Us, url: '//localhost:3001#about'}
+- {name: Book Now, url: '//localhost:3001/booking'}
+
 
 
 #-------------------------------
@@ -94,51 +95,6 @@ seo:
 
 
 #-------------------------------
-# About Section
-
-# Change the default background image, avatar and blurb
-bg-img: hero.jpg
-avatar: travitar.jpg
-
-blurb: >
-  **Kevin specialises in making things** for human people. Most of the things he makes are [digital interfaces](http://google.com), but he also puts efforts into planning his next [travel adventure](#).
-# this is the original html mark up make sure to take the greater sign '>' above out when not using markdown.
-# <p><strong>Kevin specialises in making things</strong> for human people. Most of the things he makes are <a href="#">digital interfaces</a>, but he also puts efforts into planning his next <a href="#">travel adventure</a>.</p>
-
-skills:
-- {name: Communication, value: '9'}
-- {name: Organization, value: '7'}
-- {name: Learning, value: '10'}
-- {name: Teaching, value: '6'}
-- {name: Planning, value: '7'}
-- {name: Visual Design, value: '5'}
-- {name: UX Design, value: '8'}
-- {name: Programming, value: '6'}
-
-#-------------------------------
-# Work Section
-
-projects:
-- {name: TYPO International Design Talks, folder: 'proj-1'}
-- {name: City-IN website concept, folder: 'proj-2'}
-- {name: Crisp Icons, folder: 'proj-3'}
-- {name: Flat Mobile UI/UX Concept, folder: 'proj-4'}
-- {name: Fresh It Up, folder: 'proj-5'}
-- {name: Timeline Page, folder: 'proj-6'}
-- {name: Weather Dashboard, folder: 'proj-7'}
-- {name: Stripes & Co, folder: 'proj-8'}
-
-#-------------------------------
-# Clients Section
-
-clients:
-- {avatar: 'face-aaroni.jpg', name: 'Scott Summers', title: 'Director of Design, Quebec ltd', quote: '**Lorem ipsum dolor sit amet, consectetur adipisicing elit.** Repellat, at vel exercitationem ullam, illum omnis atque sint perferendis nesciunt nobis, autem animi fuga quia consequatur neque deserunt minus magni modi.', logo: 'logo1.png'}
-- {avatar: 'face-atariboy.jpg', name: 'Scott Summers', title: 'Director of Design, Quebec ltd', quote: '**Lorem ipsum dolor sit amet, consectetur adipisicing elit.** Repellat, at vel exercitationem ullam, illum omnis atque sint perferendis nesciunt nobis, autem animi fuga quia consequatur neque deserunt minus magni modi.', logo: 'logo2.png'}
-- {avatar: 'face-jackiesaik.jpg', name: 'Scott Summers', title: 'Director of Design, Quebec ltd', quote: '**Lorem ipsum dolor sit amet, consectetur adipisicing elit.** Repellat, at vel exercitationem ullam, illum omnis atque sint perferendis nesciunt nobis, autem animi fuga quia consequatur neque deserunt minus magni modi.', logo: 'logo3.png'}
-- {avatar: 'face-teleject.jpg', name: 'Scott Summers', title: 'Director of Design, Quebec ltd', quote: '**Lorem ipsum dolor sit amet, consectetur adipisicing elit.** Repellat, at vel exercitationem ullam, illum omnis atque sint perferendis nesciunt nobis, autem animi fuga quia consequatur neque deserunt minus magni modi.', logo: 'logo4.png'}
-
-
-#-------------------------------
 # Contact Section
 
 social:
@@ -148,5 +104,7 @@ social:
 - {icon: 'instagram', link: 'http://instagram.com'}
 - {icon: 'youtube', link: 'http://youtube.com'}
 
-# can be: 'twitter' / 'facebook' / 'pinterest' / 'google-plus' / 'linkedin' / 'youtube' / 'instagram' / 'vine'
+#-------------------------------
+# The booking page
+#-------------------------------
 

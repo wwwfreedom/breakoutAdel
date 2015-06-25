@@ -25,16 +25,13 @@
     .hero-copy
       text-align: center
       h1
-        font-size: 2em
-        margin-bottom: 0.5em
-        text-transform: uppercase
-        font-weight: 300
+        @extend %h1-header
         span
           color: $primary-color
         +MQ(M)
           font-size: 3em
       p
-        font-weight: 200
+        font-weight: 300
         line-height: 1.4em
         margin: 0 auto 3em auto
         +MQ(M)

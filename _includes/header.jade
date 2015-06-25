@@ -5,7 +5,7 @@ header(class='header')
   nav(role='navigation')
     ul(class='secondary-nav').
       {% for item in site.data.settings.menu %}
-        <li><a href="{{ item.url }}"> {{ item.name }}</a></li>
+        <li><a href="{{ item.url }}" class="smoothScroll"> {{ item.name }}</a></li>
       {% endfor %}
 
   a(class='primary-nav-trigger' href='#')
