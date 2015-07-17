@@ -5,7 +5,7 @@
   top: 0
   height: 100%
   width: 100%
-  background: rgba($color-1, 0.96)
+  background: rgba($bg-color, 0.96)
   z-index: $nav-zindex
   text-align: center
   padding: $header-height-S 0
@@ -34,9 +34,10 @@
     +border-radius
     +transition(background 0.2s)
     .no-touch &:hover
-      background-color: $color-2
+      background-color: $primary-color
+
   .label
-    color: lighten($color-1, 15%)
+    color: lighten($primary-color, 15%)
     text-transform: uppercase
     font-weight: 700
     +font-size(14px)

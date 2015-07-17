@@ -2,11 +2,11 @@
   position: absolute
   top: 0
   left: 0
-  background: rgba($color-1, 0.95)
+  background: transparent
   height: $header-height-S
   width: 100%
   z-index: $header-zindex
-  box-shadow: 0 1px 2px rgba(black, 0.3)
+  // box-shadow: 0 1px 2px rgba(black, 0.3)
   +font-smoothing
   +MQ(M)
     height: $header-height-M
@@ -24,7 +24,7 @@
       // when the user scrolls down, we hide the header right above the viewport
       position: fixed
       top: -$header-height-M
-      background-color: rgba($color-1, 0.96)
+      background-color: rgba($bg-color, 0.96)
       -webkit-transition: -webkit-transform 0.3s
       -moz-transition: -moz-transform 0.3s
       transition: transform 0.3s
@@ -33,20 +33,29 @@
       +transform(translate3d(0, 100%, 0))
     &.menu-is-open
       // add a background color to the header when the navigation is open
-      background-color: rgba($color-1, 0.96)
+      background-color: rgba($bg-color, 0.96)
 
 .logo
   display: block
-  width: 100%
+  // margin-top: 0.em
+  padding-top: 0.3em
+  width: 100px
   position: absolute
   +center(y)
   left: .5em
   +MQ(M)
     left: 2.6em
+    width: 130px
+  a
+    width: 100px
+    height: 100%
 
 .secondary-nav
   position: absolute
   +center(y)
+  font-size: 0.75em
+  +MQ(L)
+    font-size: 1em
   right: 2em
   // hidden on small devices
   display: none
@@ -65,13 +74,15 @@
 
   a
     display: inline-block
-    color: $color-3
+    color: $text-color
     text-transform: uppercase
     font-weight: 700
     &:hover
       color: $primary-color
       +transition(all 0.4s ease-in-out)
   +MQ(M)
+    @media only screen and (orientation: portrait)
+      display: none
     display: block
 
 .primary-nav-trigger
@@ -80,12 +91,13 @@
   top: 0
   height: 100%
   width: 50px
-  background-color: lighten($color-1, 5%)
+  background-color: transparent
   .menu-text
-    color: $color-3
+    color: $text-color
     text-transform: uppercase
     font-weight: 700
-    // hide the text on small devices
+    font-size: 0.5em
+      // hide the text on small devices
     display: none
   .menu-icon
     // this span is the central line of the menu icon
@@ -95,7 +107,7 @@
     // mixin inside partials > _mixins.scss
     width: 18px
     height: 2px
-    background-color: $color-3
+    background-color: $text-color
     +transition(background-color 0.3s)
     // these are the upper and lower lines in the menu icon
     &::before, &:after
@@ -103,7 +115,8 @@
       width: 100%
       height: 100%
       position: absolute
-      background-color: $color-3
+      background-color: $text-color
+
       right: 0
       -webkit-transition: -webkit-transform .3s, top .3s, background-color 0s
       -moz-transition: -moz-transform .3s, top .3s, background-color 0s
@@ -113,9 +126,9 @@
     &::after
       top: 5px
     &.is-clicked
-      background-color: rgba($color-3, 0)
+      background-color: rgba($text-color, 0)
       &::before, &::after
-        background-color: rgba($color-3, 1)
+        background-color: rgba($text-color, 1)
       &::before
         top: 0
         +transform(rotate(135deg))
@@ -136,6 +149,8 @@
       display: none
     .menu-icon
       display: none
+      @media only screen and (orientation: portrait)
+        display: block
       // left: auto
       // right: 1em
       // +transform(translateX(0) translateY(-50%))

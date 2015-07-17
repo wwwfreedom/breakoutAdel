@@ -5,24 +5,91 @@
   header
     h2
       @extend %h2-header
-      margin: 2em auto 1.5em
+      margin: 0 auto
       text-align: center
+    .divider
+      height: 1px
+      width: 100px
+      background-color: $primary-color
+      margin: 1em auto 0.5em auto
       +MQ(M)
-        margin-bottom: 2em
-  &--map
-    display: none
+        margin-bottom: 4em
+      +MQ(L)
+        margin-bottom: 5em
+  .map-about-wrap
+    +display(flex)
+    +flex-direction(column)
     +MQ(M)
-      display: block
-      width: 600px
-      height: 450px
-      margin: 1.5em auto
+      margin: 0 auto
+      +flex-direction(row)
+      +justify-content(space-around)
+      @media only screen and (orientation: portrait)
+        +flex-direction(column)
+    +MQ(L)
+      max-width: 1170px
+      margin: 0 auto
+    .map-wrap
+      margin: 0 auto
+      .mobileMapBig
+        display: none
+        +MQ(M)
+          display: block
+          width: 400px
+          @media only screen and (orientation: portrait)
+            margin: 0 auto
+        +MQ(L)
+          width: 450px
 
-  &--mobilemap
-    width: 300px
-    height: 350px
-    margin: 4em auto 0
-    +MQ(M)
-      display: none
+      .mobileMapSmall
+        width: 300px
+        height: 350px
+        margin: 4em auto 0
+        +MQ(M)
+          display: none
+    .about-copy
+      width: 350px
+      text-align: center
+      margin: 0 auto
+      +MQ(M)
+        width: 450px
+        @media only screen and (orientation: portrait)
+          margin-top: 2em
+        padding-left: 1em
+        padding-right: 1em
+      .about-copy-header
+        margin: 2em 0em 1em
+        +MQ(M)
+          @media only screen and (orientation: landscape)
+            margin: 0em auto
+        +MQ(L)
+          margin: 0em auto
+      h3, h4
+        font:
+          size: 1.5em
+          weight: 300
+        text-transform: uppercase
+        text-align: left
+      h4
+        margin-top: 1em
+      p
+        font:
+          size: 1em
+        // margin: 1em
+        color: #7a7a7a
+        text-align: left
+    .about-copy-footer
+      margin-top: 2em
+      a
+        color: $primary-color
+        font-size: 1.5em
+        font-style: italic
+        font-weight: 300
+        &:hover
+          border-bottom: 1px solid $primary-color
+          padding-bottom: 5px
+          +transition(all 0.25s ease-in-out)
+
+
 
   // styling for the address, social and form modules
   &--body
@@ -39,7 +106,7 @@
       margin: 4em auto
     &--address-social
       +MQ(L)
-        width: 500px
+        width: 450px
       .map--address
         +display(flex)
         +flex-direction(column)
@@ -127,8 +194,6 @@
         width: 450px
         @media only screen and (orientation: portrait)
           margin: 0 auto
-      +MQ(L)
-        width: 500px
 
     fieldset
       margin: 24px 0
@@ -199,8 +264,9 @@
       box-shadow: inset 0 1px 1px rgba($light-gray, 0.08)
       &:focus
         outline: none
-        border-color: $color-3
-        box-shadow: 0 0 5px rgba($color-3, 0.2)
+        border-color: $text-color
+
+        box-shadow: 0 0 5px rgba($text-color, 0.2)
 
     textarea
       min-height: 200px

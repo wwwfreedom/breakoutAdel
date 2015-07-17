@@ -2,7 +2,7 @@ $(document).ready(function($){
   navigation();
   faqExpander();
   formControl();
-  lazyloadMap();
+  // lazyloadMap();
   copyright();
   smoothScroll();
 

@@ -1,43 +1,43 @@
-.game
+.whyWhereWhen
   +display(flex)
   +flex-direction(column)
   background: $bg-color
   color: #f2f2f2
-  .game-title
-    +display(flex)
-    +justify-content(center)
-    margin: 1.5em 0 0 0
-    h2
-      font:
-        size: 2em
-        weight: 300
-      text-transform: uppercase
-      margin-bottom: 1.5em
-      margin-top: 1.5em
-  .game-intro
-    text-align: center
-    width: 45%
-    font-weight: 300
-    line-height: 1.4em
-    margin: 2em auto 0 auto
-    +MQ(M)
-      font-size: 1.1em
-      max-width: 60%
-  .game-cards
+  margin: 2em auto -1em
+  +MQ(M)
+    margin: 2em auto
+  .whyWhereWhen-cards
     +display(flex)
     +flex-direction(column)
     +justify-content(center)
+    margin: 1em
     +MQ(M)
       +flex-direction(row)
       +justify-content(space-around)
-      margin: 1em
     +MQ(L)
       width: 960px
-      margin: 0 auto
-    .game-step
+      margin: 4em auto 1em auto
+    .whyWhereWhen-step
       +display(flex)
       +flex-direction(column)
       text-align: center
+      margin-bottom: 1.5em
+      span
+        font-weight: 700
+      a
+        // font-weight: 300
+        // color: $primary-color
+        // &:hover
+        //   font-weight: 700
+        //   +transition(all 0.25s ease-in)
+        color: $primary-color
+        font-size: 1em
+        font-style: italic
+        font-weight: 300
+        &:hover
+          border-bottom: 1px solid $primary-color
+          padding-bottom: 2px
+          +transition(all 0.25s ease-in-out)
       +MQ(SM)
         width: 350px
         margin: 0 auto
@@ -53,9 +53,7 @@
       .subheading
         margin: 0 auto
         +MQ(M)
-          height: 6em
-          width: 10em
-        // margin-bottom: 1em
+          margin-bottom: 1em
         h3
           font:
             size: 1.3em

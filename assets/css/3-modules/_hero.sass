@@ -25,17 +25,57 @@
     .hero-copy
       text-align: center
       h1
+        display: none
+      h2
         @extend %h1-header
+        margin-bottom: 2em
         span
           color: $primary-color
         +MQ(M)
           font-size: 3em
-      p
-        font-weight: 300
-        line-height: 1.4em
-        margin: 0 auto 3em auto
-        +MQ(M)
-          font-size: 1.1em
-          max-width: 40%
     a
       @extend %cta-button
+  .quick-sign-up-bar
+    .InputAddOn
+      +display(flex)
+      width: 300px
+      margin: 0 auto
+      +MQ(M)
+        width: 350px
+
+    .InputAddOn-field
+      background-color: rgba(0,0,0,0.4)
+      +flex(1)
+
+    .InputAddOn-item
+      font-size: 0.75em
+      border-radius: .25em
+      background: $primary-color
+      color: white
+      pointer:auto
+      &:hover
+        background: white
+        color: red
+        +transition(all 0.25s ease-in-out)
+      text-transform: uppercase
+      +MQ(M)
+        padding: 0.5em .75em
+        font-size: 1em
+
+
+    .InputAddOn-field,
+    .InputAddOn-item
+      border: 1px solid rgba(147, 128, 108, 0.25)
+      padding: 0.5em 0.75em
+
+    .InputAddOn-field:first-child,
+    .InputAddOn-item:first-child
+      border-radius: 2px 0 0 2px
+
+    .InputAddOn-field:last-child,
+    .InputAddOn-item:last-child
+      border-radius: 0 2px 2px 0
+    p
+      text-align: center
+      color: $light-gray
+      margin: 1em 1em 0 1em

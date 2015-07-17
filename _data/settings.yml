@@ -1,20 +1,29 @@
 # Portfolio settings
 title: Escape Room SA
 email: tig3r86@gmail.com
-description: "You have 60 minutes working as a team to discover hidden objects, figure out the clues and unravel mysterious puzzle to escape the room. Bring your friends, family and have a great time."
-taglines: "Experience Adelaide's first live puzzle game"
-punchline: "60 minutes to escape"
+# description: "You have 60 minutes working as a team to discover hidden objects, figure out the clues and unravel mysterious puzzle to escape the room. Bring your friends, family and have a great time."
+# description: "Escape Room SA is a fun, interactive real life escape game. The premise is simple: you and your mates are locked in a themed room. Inside you have to find clues, decode message and solve the puzzle to escape before time runs out. Book our room and see if you have what it takes to escape? "
+description: "At Escape Room SA, we're creating a space for you to experience the new global phenomenon of live escape games.The idea is you and your mates are led into a themed room, provided a back story and then you have 60 minutes to solve a series of puzzles and riddles  to escape the room."
+tagline: "Experience Adelaide's first live puzzle game"
+tagline: "60 minutes to escape"
+tagline: "Experience what it's like to be Sherlock Holmes"
+tagline: "How fast can you escape?"
+tagline: "It's like a movie, starring YOU and your mates!"
+
 
 
 #Menu item list
 
 menu:
-- {name: The Game, url: '//localhost:3001#game'}
-- {name: The Rooms, url: '//localhost:3001#room'}
-- {name: Faq, url: '//localhost:3001#faq'}
-- {name: About Us, url: '//localhost:3001#about'}
-- {name: Book Now, url: '//localhost:3001/booking'}
-
+- {name: "What is this?", url: '#what'}
+- {name: "Who's it for?", url: '#perfectFor'}
+- {name: Our Room, url: '#room'}
+# - {name: Faq, url: '#faq'}
+- {name: About Us, url: '#about'}
+- {name: Contact Us, url: '#contact'}
+- {name: Subscribe, url: '#subscribe'}
+# - {name: Book Now, url: '//localhost:3001/booking'}
+# - {name: Contact Us, url: '//localhost:3001#contact'}
 
 
 #-------------------------------
@@ -23,17 +32,19 @@ menu:
 
 game-title: "The game"
 
-step1-title: "Work Together in a team"
-step1-copy: "This is the copy paragraph accompanying the step1-title"
+game-intro: "The game begins the moment you enter into the room. The clock will start counting down and you will have 60 minutes to escape. "
 
-step2-title: "Beat the clock"
-step2-copy: "Solve the puzzles and escape before time runs out. "
+step1-title: "Search for clue"
+step1-copy: "Find the hidden clues! Observe your surrounding. Nothing is as it seem."
 
-step3-title: "Think outside the box"
-step3-copy: "Get creative and connect the dots to uncover the hidden clues."
+step2-title: "Think outside the box"
+step2-copy: "Get creative and make the connections."
 
-step4-title: "Be the first to escape"
-step4-copy: "Make history! Be the first to escape the first live escape game in Adelaide."
+step3-title: "Work as a team"
+step3-copy: "It'll take more than one brain to solve the puzzles. Teamwork is paramount."
+
+step4-title: "Escape"
+step4-copy: "Make history! Be the first to go on our wall of fame."
 
 #-------------------------------
 # The roooms section
@@ -41,8 +52,9 @@ step4-copy: "Make history! Be the first to escape the first live escape game in 
 
 room-title: "The Rooms"
 
-room1-title: "Killer escape"
-room1-copy: "Your team has been tipped off about the location of a serial killer's study, the door is unlocked and you sneak in. You look behind and the door quickly swings shut. You hear a locking noise and from a speaker somewhere you hear: ‘Intruder alert! Intruder alert! Self-destruct sequence has been activated! 1 Hour until self-destruct!’ Find out where the next victim is being held and find a way to escape before the bomb goes off."
+
+room1-title: "The mysterious study"
+room1-copy: "Your favourite archeology teacher, William Smith, has been missing for a while. One day you receive a package"
 
 room2-title: "No where to go"
 room2-copy: "You awake in a basement, it is dark and it is cold. The smell of rot smacks you across the face and sends you reeling. You try to get up and stumble, realising that your hands are tied. There are others. Others locked in the same room as you. Others locked in the room next door. You have no idea how you got here but you do know one thing. This isn't a safe place. Work together as a team to escape before the person who put you here returns."
@@ -59,9 +71,26 @@ faq:
 
 - question: "Am I really locked inside the room?"
   answer: "The front door that you enter from will always be unlocked. This is because if anyone feels uncomfortable during the session, they always have the option to opt out. Unfortunately, the person that comes out cannot enter the room again and will not count as a success escape. Others in the room can still continue on with their mission."
-
+- question: "How long is the game?"
+  answer: "The game itself is an hour (or less if you escape!) with additional time to welcome you to Improbable Escapes. It is approximately an 1.5 hours in total We encourage you come to your appointment 10 minutes early to ensure you will be ready and prepped for your game. For groups larger than 8, the appointment will range from 2-2.5 hours, but will still be an hour total of game play per player."
 - question: "Will there be anyone scaring us?"
   answer: "Don’t worry! There will be no one popping out from anywhere to scare you."
+- question: "What if we're stuck and can't figure something out?"
+  answer: "Sometimes you will get stuck but it's ok. You will be able to ask the gamemaster for hints."
+- question: "Can I bring my phone, smart watch or laptop into the room? What about a light source like a flashlight or my trusty bic?"
+  answer: "The simple answer is no. We don't want you be distracted those devices."
+- question: "Do you take walk-ins?"
+  answer: "We'd love for you to come and visit us! However we are open for games by appointment only. If you want to book a game immediately please give us a phone call and we would be glad to try to accommodate you!"
+- question: "How many players do you recommend?"
+  answer: "We recommend anywhere between 2-6 players per room"
+- question: "It is possible to cancel or reschedule our reservation?"
+  answer: "You are able to reschedule or cancel your reservation up to 48 hours prior to your reservation."
+- question: "What is the recommended age to play your game?"
+  answer: "Everyone is welcome! However we recommend that children be at least 12 years old to fully enjoy the experience. Please note that any child under the age of 16 needs to be accompagnied by at least one adult"
+- question: "I have a medical condition, should I be playing this game?"
+  answer: "Although our rooms are quite safe, we recommend you check with your physician if you have any concerns or doubts before playing our game. Feel free to contact us directly if you need additional information."
+- question: "I have a question that is not answered here!"
+  answer: "Feel free to contact us anytime! One of our team members will be happy to help!"
 
 
 
@@ -72,7 +101,7 @@ faq:
 about-title: "About us"
 
 about-sub-title1: "Who we are"
-about-copy1: "Escape Room Sa is one of Adelaide's first independent live escape room venue. Founded by two mates, Anton and Kevin. We are big fans of escape games and have played heaps of venues all around the world in our travel. We were bummed out that our home town awesome Radelaide doesn't have a single escape game venue. So we decided to create one."
+about-copy1: "Escape Room SA is Adelaide's first independent live escape room venue, founded by two mates, Anton and Kevin. When we moved back to Adelaide, we were surprised that the trend hadn’t taken off in SA. Both of us are big fans of escape games and have played in venues all around the world. We want to bring a unique escape room with a personalised touch to Adelaide."
 
 about-sub-title1: "Our vision"
 about-copy2: "We want to create a fun memorable live escape game experience for everyone. Our aim for every player of the game is to feel the rush of escaping in a safe environment while having a lot of fun as well."

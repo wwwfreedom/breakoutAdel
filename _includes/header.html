@@ -1,6 +1,6 @@
 
 <header class="header">
-  <div class="logo"></div>{% include logo.html %}
+  <div class="logo"><a href="#top">{% include logo.html %}</a></div>
   <nav role="navigation">
     <ul class="secondary-nav">
       {% for item in site.data.settings.menu %}
@@ -8,5 +8,9 @@
       {% endfor %}
 
     </ul>
-  </nav><a href="#" class="primary-nav-trigger"><span class="menu-text">Menu</span><span class="menu-icon"></span></a>
+  </nav>
+  <a href="#" class="primary-nav-trigger">
+  <span class="menu-text">Menu</span>
+  <span class="menu-icon"></span>
+  </a>
 </header>

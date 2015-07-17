@@ -3,21 +3,44 @@
   <article id="contact">
     <header>
       <h2>Contact Us</h2>
+      <div class="divider"></div>
     </header>
-    <div id="map-canvas" data-lat="-34.928474" data-lng="138.599810" class="contact--map"></div>
-    <div class="contact--mobilemap"><img src="http://maps.googleapis.com/maps/api/staticmap?center=adelaide&amp;zoom=13&amp;scale=false&amp;size=300x350&amp;maptype=roadmap&amp;format=png&amp;visual_refresh=true&amp;markers=size:small%7Ccolor:red%7Clabel:1%7Cadelaide" alt="Google Map of adelaide"/></div>
+    <!-- <div id="map-canvas" data-lat="-34.928474" data-lng="138.599810" class="contact--map"></div> -->
+    <div class="map-about-wrap">
+      <div class="map-wrap">
+        <div class="mobileMapBig">
+          <img src="http://maps.googleapis.com/maps/api/staticmap?center=adelaide&amp;zoom=13&amp;scale=false&amp;size=450x400&amp;maptype=roadmap&amp;format=png&amp;visual_refresh=true&amp;markers=size:small%7Ccolor:red%7Clabel:1%7Cadelaide" alt="Google Map of adelaide"/>
+        </div>
+        <div class="mobileMapSmall">
+          <img src="http://maps.googleapis.com/maps/api/staticmap?center=adelaide&amp;zoom=13&amp;scale=false&amp;size=300x350&amp;maptype=roadmap&amp;format=png&amp;visual_refresh=true&amp;markers=size:small%7Ccolor:red%7Clabel:1%7Cadelaide" alt="Google Map of adelaide"/>
+        </div>
+      </div>
+      <div class="about-copy">
+        <div class="about-copy-header">
+          <!-- <h3>{{ site.data.settings.about-sub-title1 }}</h3> -->
+          <h3>About Us</h3>
+        </div>
+        <p>{{ site.data.settings.about-copy1 }}</p>
+        <!-- <div class="about-copy-header">
+          <h4>{{ site.data.settings.about-sub-title2 }}</h4>
+        </div> -->
+        <!-- <p>{{ site.data.settings.about-copy2 }}</p> -->
+        <!-- <div class="about-copy-footer"><a href="#social">Click here, to follow us.</a></div> -->
+      </div>
+    </div>
     <div class="contact--body">
       <div class="contact--body--address-social">
-        <div class="map--address"><a href="https://www.google.com/maps/dir//adelaide/" target="_blank" class="icon-map-marker">Adelaide SA 5000</a><a href="tel:0938021039" class="icon-phone">0938 021 039</a><a href="#form" class="icon-envelope-o">escaperoomsa@gmail.com</a></div>
-        <div class="map--cta--button"><a href="https://www.google.com/maps/dir//adelaide/" target="_blank">Tap here to lauch map with direction</a></div>
+        <div class="map--address">
+          <a href="https://www.google.com/maps/dir//adelaide/" target="_blank" class="icon-map-marker">Adelaide SA 5000</a><a href="tel:0424080464" class="icon-phone">0424 080 464</a><a href="#form" class="icon-envelope-o">escaperoomsa@gmail.com</a></div>
+        <!-- <div class="map--cta--button"><a href="https://www.google.com/maps/dir//adelaide/" target="_blank">Tap here to lauch map with direction</a></div> -->
         <div class="icon--wrap">
-          <h3>Follow us</h3>
+          <h3 id="social">Follow us</h3>
           <div class="icons">
-            <li><a href="#" target="_blank" class="icon-facebook"></a></li>
-            <li class="fb"><a href="#" target="_blank" class="icon-twitter"></a></li>
-            <li class="tw"><a href="#" target="_blank" class="icon-google-plus"></a></li>
-            <li class="ig"><a href="#" target="_blank" class="icon-instagram"></a></li>
-            <li class="yt"><a href="#" target="_blank" class="icon-youtube"></a></li>
+            <li><a href="https://www.facebook.com/escaperoomsa" target="_blank" class="icon-facebook"></a></li>
+            <li><a href="https://twitter.com/saescaperoom" target="_blank" class="icon-twitter"></a></li>
+            <!-- <li class="tw"><a href="#" target="_blank" class="icon-google-plus"></a></li> -->
+            <li><a href="https://instagram.com/escaperoomsa/" target="_blank" class="icon-instagram"></a></li>
+            <!-- <li class="yt"><a href="#" target="_blank" class="icon-youtube"></a></li> -->
           </div>
         </div>
       </div>
