@@ -1,6 +1,6 @@
 .what
   text-align: center
-  margin: 1em
+  margin: 0 auto
   h1
     font:
       size: 2em
@@ -11,11 +11,11 @@
   .divider
     @extend %divider
   .what-content
-    margin: 3.5em auto
-    width: 300px
+    margin: 3.5em 1em
+    +MQ(SM)
+      width: 350px
+      margin: 2.5em auto
     +MQ(M)
       width: 400px
-      margin: 2.5em auto
     +MQ(L)
       width: 450px
-      margin: 2.5em auto

@@ -47,15 +47,16 @@
         +MQ(M)
           display: none
     .about-copy
-      width: 350px
-      text-align: center
+      text-align: left
       margin: 0 auto
+      padding-left: 1em
+      padding-right: 1em
+      +MQ(SM)
+        width: 350px
       +MQ(M)
-        width: 450px
+        width: 400px
         @media only screen and (orientation: portrait)
           margin-top: 2em
-        padding-left: 1em
-        padding-right: 1em
       .about-copy-header
         margin: 2em 0em 1em
         +MQ(M)
@@ -68,15 +69,12 @@
           size: 1.5em
           weight: 300
         text-transform: uppercase
-        text-align: left
       h4
         margin-top: 1em
       p
         font:
           size: 1em
-        // margin: 1em
         color: #7a7a7a
-        text-align: left
     .about-copy-footer
       margin-top: 2em
       a
