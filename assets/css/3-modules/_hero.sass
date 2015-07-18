@@ -45,6 +45,7 @@
 
     .InputAddOn-field
       background-color: rgba(0,0,0,0.4)
+      margin: 0
       +flex(1)
 
     .InputAddOn-item
@@ -62,7 +63,6 @@
         padding: 0.5em .75em
         font-size: 1em
 
-
     .InputAddOn-field,
     .InputAddOn-item
       border: 1px solid rgba(147, 128, 108, 0.25)
@@ -79,3 +79,34 @@
       text-align: center
       color: $light-gray
       margin: 1em 1em 0 1em
+
+    .emailForm-messages
+      margin: 1em auto
+      max-width: 300px
+      +MQ(M)
+        max-width: 350px
+      p
+        font:
+          size: 1em
+          weight: 300
+        color: $text-color
+        border-radius: .25em
+        text-align: center
+        +font-smoothing
+        opacity: 0
+        max-height: 0em
+        margin: 0
+
+      .error
+        padding: 0.5em
+        max-height: 100%
+        opacity: 1
+        background: shade($primary-color, 20%)
+        +transition(all 0.3s ease)
+
+      .success
+        padding: 0.5em
+        max-height: 100%
+        opacity: 1
+        background: tint(green, 20%)
+        +transition(all 0.3s ease)

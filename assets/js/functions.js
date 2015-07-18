@@ -1,6 +1,7 @@
 $(document).ready(function($){
   navigation();
   faqExpander();
+  emailControl();
   formControl();
   // lazyloadMap();
   copyright();
@@ -74,6 +75,29 @@ $window.on( 'resize', $pluginInstance.debounce( 1000, function()
 
 }
 
+// function to control the submission of the email form
+//
+function emailControl() {
+  // get the form
+  var form = $('.emailSubscribeForm');
+  var formMessages = $('.emailForm-messages p');
+  var emailInput = $('#emailSubscribe');
+
+  // set up an event listener for the email form
+  $(form).submit(function(e) {
+    e.preventDefault();
+    var emailFilter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,10})+$/;
+    var emailText = $("#email").val();
+    if (!emailFilter.test(emailText)) {
+      $(formMessages).text("Please enter a valid email address").toggleClass('error');
+      $(emailInput).toggleClass('error');
+      return false;
+    } else {
+      $(formMessages).text('').toggleClass('error');
+      $(emailInput).toggleClass('error');
+    }
+  });
+}
 
 // function to control the submission of the contact form
 //

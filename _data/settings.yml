@@ -118,9 +118,9 @@ about-copy2: "We want to create a fun memorable live escape game experience for 
 # NOTE: Providing SEO information will make this website more searchable on the internet.
 
 seo:
-  description: 'Provide a description for your website to make it visible to search engines.'
-  rel-author: 'https://plus.google.com/u/0/+DevTipsForDesigners/'
-  rel-publisher: 'https://plus.google.com/u/0/+DevTipsForDesigners/'
+  description: "Escape Room SA is Adelaide's latest independent real-life escape game, offering exciting rooms with unique themes to give fans of exit and escape games a fun new adventure. Players will be locked in a room and must hunt and search for clues to discover a way out. Rate us on Tripadvisor"
+  # rel-author: 'https://plus.google.com/u/0/+DevTipsForDesigners/'
+  # rel-publisher: 'https://plus.google.com/u/0/+DevTipsForDesigners/'
 
 
 #-------------------------------

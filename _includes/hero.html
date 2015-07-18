@@ -9,12 +9,15 @@
     </div>
   </div>
   <div class="quick-sign-up-bar">
-    <form action="/signup">
+    <form novalidate="novalidate" class="emailSubscribeForm">
       <div class="InputAddOn">
-        <input class="InputAddOn-field" placeholder="Your email">
-        <button class="InputAddOn-item">Subscribe</button>
+        <input type="email" class="InputAddOn-field" placeholder="Your email" id="emailSubscribe" required="required">
+        <button type="submit" class="InputAddOn-item">Subscribe</button>
       </div>
     </form>
+    <div class="emailForm-messages">
+        <p></p>
+    </div>
     <p>We are opening soon, subscribe for updates and opening discounts.</p>
   </div>
 </div>
