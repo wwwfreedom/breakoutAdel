@@ -1,8 +1,8 @@
 .hero
-  $hero-background-top: #7f99be
-  $hero-background-bottom: #20392b
+  $hero-background-top: $light-gray
+  $hero-background-bottom: $bg-color
   $hero-color: white
-  $gradient-angle: 10deg
+  $gradient-angle: 0deg
   $hero-image: "../img/hero3.jpg"
   +background(url($hero-image), linear-gradient($gradient-angle, $hero-background-bottom, $hero-background-top), no-repeat $hero-background-top scroll)
   background-color: #324766
@@ -35,21 +35,23 @@
           font-size: 3em
     a
       @extend %cta-button
-  .quick-sign-up-bar
-    .InputAddOn
-      +display(flex)
-      width: 300px
-      margin: 0 auto
-      +MQ(M)
-        width: 350px
-
-    .InputAddOn-field
-      background-color: rgba(0,0,0,0.4)
+  #mc_embed_signup_scroll
+    +display(flex)
+    +flex-direction(column)
+    width: 250px
+    margin: 0 auto
+    +MQ(M)
+      +flex-direction(row)
+      width: 450px
+    .mc-field-group
+      +flex(3)
       margin: 0
-      +flex(1)
-
-    .InputAddOn-item
-      font-size: 0.75em
+      input
+        background-color: rgba(0,0,0,0.4)
+        border-radius: 0px
+      +MQ(M)
+        font-size: 1em
+    #mc-embedded-subscribe
       border-radius: .25em
       background: $primary-color
       color: white
@@ -59,54 +61,48 @@
         color: red
         +transition(all 0.25s ease-in-out)
       text-transform: uppercase
-      +MQ(M)
-        padding: 0.5em .75em
-        font-size: 1em
-
-    .InputAddOn-field,
-    .InputAddOn-item
-      border: 1px solid rgba(147, 128, 108, 0.25)
-      padding: 0.5em 0.75em
-
-    .InputAddOn-field:first-child,
-    .InputAddOn-item:first-child
-      border-radius: 2px 0 0 2px
-
-    .InputAddOn-field:last-child,
-    .InputAddOn-item:last-child
       border-radius: 0 2px 2px 0
-    p
-      text-align: center
-      color: $light-gray
-      margin: 1em 1em 0 1em
-
-    .emailForm-messages
-      margin: 1em auto
-      max-width: 300px
+      border: 1px solid rgba(147, 128, 108, 0.25)
+      padding: 0.5em .75em
+      margin: 0 auto
       +MQ(M)
-        max-width: 350px
-      p
-        font:
-          size: 1em
-          weight: 300
-        color: $text-color
-        border-radius: .25em
-        text-align: center
-        +font-smoothing
-        opacity: 0
-        max-height: 0em
-        margin: 0
+        font-size: 1em
+  .email-name
+    +flex(2)
+    input
+      border-radius: 2px 0 0 2px
+      background-color: rgba(0,0,0,0.4)
+  .emailForm-messages
+    margin: 1em auto
+    max-width: 300px
+    +MQ(M)
+      max-width: 350px
+    p
+      font:
+        size: 1em
+        weight: 300
+      color: $text-color
+      border-radius: .25em
+      text-align: center
+      +font-smoothing
+      opacity: 0
+      max-height: 0em
+      margin: 0
 
-      .error
-        padding: 0.5em
-        max-height: 100%
-        opacity: 1
-        background: shade($primary-color, 20%)
-        +transition(all 0.3s ease)
+    .error
+      padding: 0.5em
+      max-height: 100%
+      opacity: 1
+      background: shade($primary-color, 20%)
+      +transition(all 0.3s ease)
 
-      .success
-        padding: 0.5em
-        max-height: 100%
-        opacity: 1
-        background: tint(green, 20%)
-        +transition(all 0.3s ease)
+    .success
+      padding: 0.5em
+      max-height: 100%
+      opacity: 1
+      background: tint(green, 20%)
+      +transition(all 0.3s ease)
+  .announcement
+    text-align: center
+    color: $text-color
+    margin: 1em 1em 0 1em
